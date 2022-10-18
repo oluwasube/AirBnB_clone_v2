@@ -264,3 +264,4 @@ $ python3 unittest -m tests/test_console.py
 
 - **Oluwasube Promise** <[Promise](https://github.com/oluwasube)>
 - **Lawson Ibukun** <[Ibukun](https://github.com/lawkay1)>
+END
