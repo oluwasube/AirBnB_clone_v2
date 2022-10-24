@@ -10,12 +10,10 @@ def hello_hnbn():
     """display Hello HBNB"""
     return "Hello HBNB!"
 
-
 @app.route("/hbnb", strict_slashes=False)
 def show_hnbn():
     """display HBNB"""
     return "HBNB"
-
 
 @app.route("/c/<text>", strict_slashes=False)
 def display_c(text):
@@ -32,8 +30,13 @@ def display_pythontext(text='is cool'):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def display_number(n):
-    """display n is a number only if i is an integer"""
+    """display n is a number only if n is an integer"""
     return "{} is a number".format(n)
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def display_htmlpage(n):
+    """display a html page if n is an integer"""
+    return render_template("5-number.html", n=n)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
